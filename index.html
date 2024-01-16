@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    a{
+        animation-name: mou;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 4em;
+        text-decoration: none;
+        border-bottom: .1em solid blue;
+        color: blue;
+        transition: color 2s, border 2s;
+    }
+    @keyframes mou{
+        0%{
+            top: 0;
+            left: 0;
+        }
+        25%{
+            top: 0;
+            left: 80%;
+        }
+        50%{
+            top: 80%;
+            left: 80%;
+        }
+        75%{
+            top: 80%;
+            left: 0;
+        }
+        100%{
+            top: 0;
+            left: 0;
+        }
+    }
+    a:hover{
+        border-bottom: .1em solid greenyellow;
+        color: greenyellow;
+    }
+    #trans{
+        transform: rotate(20deg);
+    }
+    a:hover #trans{
+        transform: rotate(90deg);
+    }
+    span:first-child{
+        padding: 0;
+        transition: padding 2s;
+    }
+    a:hover span:first-child{
+        padding-right: 10em;
+    }
+</style>
+<body>
+    <a id="trans" href="#"><span>click </span>here</spanZ></a>
+    <a href="#"><span>click </span>here</spanZ></a>
+</body>
+</html>
